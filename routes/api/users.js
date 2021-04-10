@@ -82,3 +82,5 @@ router.post(
 );
 
 module.exports = router;
+
+// Send jwt back so that user can access protected routes
