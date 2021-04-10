@@ -19,3 +19,8 @@ module.exports = function (req, res, next) {
     res.status(401).json({ msg: 'Token is not valid' });
   }
 };
+
+// In React we will constantly make a request with the token if we're authenticated,
+// and fill our redux/application state with the user object, so we know which user is logged in.
+
+// Login with users that are already in the database
