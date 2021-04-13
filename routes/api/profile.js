@@ -124,9 +124,30 @@ router.get('/user/:user_id', async (req, res) => {
     const profile = await Profile.findOne({
       user: req.params.user_id,
     }).populate('user', ['name', 'avatar']);
-    if (!profile)
-      return res.status(400).json({ msg: 'This user has not made a profile' });
+    if (!profile) return res.status(400).json({ msg: 'Profile not found' });
     res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    // Check
+    if (err.kind == 'ObjectId') {
+      return res.status(400).json({ msg: 'Profile not found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route   DELETE api/profile
+// @desc    Delete profile, User & Posts
+// @access  Private
+
+router.delete('/', auth, async (req, res) => {
+  try {
+    // Remove Profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+    // Remove User
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({ msg: 'User Removed' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
