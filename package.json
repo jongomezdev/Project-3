@@ -32,5 +32,13 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
     "request": "^2.88.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jongomezdev/Project-3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jongomezdev/Project-3/issues"
+  },
+  "homepage": "https://github.com/jongomezdev/Project-3#readme"
 }
