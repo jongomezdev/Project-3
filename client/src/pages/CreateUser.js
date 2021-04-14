@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../components/RegisterCard' // registercard for register user ? AP assummed 
 
  
-function User(props) {
+function createUser(props) {
   const username = useFormInput('');
   const password = useFormInput('');
   const [error, setError] = useState(null);
@@ -15,70 +15,63 @@ function User(props) {
  
   return (
     <div>
-      Create New User<br /><br />
+      Create New User<br /><br/>
       <div>
-        Username<br />
-        <input type="text" {...username} autoComplete="new-password" ref="user"/>
-      </div>
-      <div style={{ marginTop: 10 }}>
-        Password<br />
-        <input type="password" {...password} autoComplete="new-password" />
-      </div>
-      <div>
-        Company<br />
-        <input type="text" {...company} autoComplete="new-password" />
+        Company<br /> 
+         {/* Should we turn this into current Company or Employer ?  */}
+        <input type="text" {...company} autoComplete="new-password" label="currentCompany" />
       </div>
       <div style={{ marginTop: 10 }}>
         Website<br />
-        <input type="text" {...website} autoComplete="new-password" />
+        <input type="text" {...website} autoComplete="new-password" label="Website" />
       </div>
       <div>
         Location<br />
-        <input type="text" {...location} autoComplete="new-password" />
+        <input type="text" {...location} autoComplete="new-password" label="Location" />
       </div>
       <div style={{ marginTop: 10 }}>
         Status<br />
-        <input type="text" {...status} autoComplete="new-password" required= "true"/>
+        <input type="text" {...status} autoComplete="new-password" label="Status" required= "true"/>
       </div>
       <div>
         Skills<br />
-        <input type="boolean" {...skills} autoComplete="new-password" required= "true"/>
+        <input type="boolean" {...skills} autoComplete="new-password" label="Skills" required= "true"/>
       </div>
       <div style={{ marginTop: 10 }}>
         Bio<br />
-        <input type="text" {...bio} autoComplete="new-password" />
+        <input type="text" {...bio} label="Bio" autoComplete="new-password" />
       </div>
       <div>
         GithubUsername<br />
-        <input type="text" {...githubusername} autoComplete="new-password" />
+        <input type="text" {...githubusername} label="GithubUsername" autoComplete="new-password" />
       </div>
       <div style={{ marginTop: 10 }}>
         Experience<br />
-        <input type="text" {...title} autoComplete="new-password" required= "true"/>
-        <input type="text" {...company} autoComplete="new-password" required= "true"/>
-        <input type="text" {...location} autoComplete="new-password" />
-        <input type="date" {...from} autoComplete="new-password" required= "true"/>
-        <input type="date" {...to} autoComplete="new-password" />
-        <input type="date" {...current} autoComplete="new-password" default="false" />
-        <input type="text" {...description} autoComplete="new-password" />
+        <input type="text" {...title} autoComplete="new-password" label="Title" required= "true"/>
+        <input type="text" {...company} autoComplete="new-password" label="Company" required= "true"/>
+        <input type="text" {...location} autoComplete="new-password" label="Location" />
+        <input type="date" {...from} autoComplete="new-password" label="From:" required= "true"/>
+        <input type="date" {...to} autoComplete="new-password" label="To:" />
+        <input type="date" {...current} autoComplete="new-password" label="Current" default="false" />
+        <input type="text" {...description} autoComplete="new-password" label="Description" />
       </div>
       <div style={{ marginTop: 10 }}>
         Education<br />
-        <input type="text" {...school} autoComplete="new-password" required= "true"/>
-        <input type="text" {...degree} autoComplete="new-password" required= "true"/>
-        <input type="text" {...fieldofstudy} autoComplete="new-password" required= "true"/>
-        <input type="date" {...from} autoComplete="new-password" />
-        <input type="date" {...to} autoComplete="new-password" />
-        <input type="date" {...current} autoComplete="new-password" default="false"/>
-        <input type="text" {...description} autoComplete="new-password" />
+        <input type="text" {...school} autoComplete="new-password" label="School" required= "true"/>
+        <input type="text" {...degree} autoComplete="new-password" label="Degree" required= "true"/>
+        <input type="text" {...fieldofstudy} autoComplete="new-password" label="Field of Study" required= "true"/>
+        <input type="date" {...from} autoComplete="new-password" label="From:" />
+        <input type="date" {...to} autoComplete="new-password" label="To:" />
+        <input type="date" {...current} autoComplete="new-password" label="Current" default="false"/>
+        <input type="text" {...description} autoComplete="new-password" label="Description" />
       </div>
       <div style={{ marginTop: 10 }}>
         Social<br />
-        <input type="text" {...youtube} autoComplete="new-password" />
-        <input type="text" {...twitter} autoComplete="new-password" />
-        <input type="text" {...facebook} autoComplete="new-password" />
-        <input type="date" {...linkedin} autoComplete="new-password" />
-        <input type="date" {...instagram} autoComplete="new-password" />
+        <input type="text" {...youtube} autoComplete="new-password" label="Youtube" />
+        <input type="text" {...twitter} autoComplete="new-password" label="Twitter" />
+        <input type="text" {...facebook} autoComplete="new-password" label="Facebook" />
+        <input type="text" {...linkedin} autoComplete="new-password" label="LinkedIn" />
+        <input type="text" {...instagram} autoComplete="new-password" label="Instagram" />
       </div>
       <div style={{ marginTop: 10 }}>
         Date<br />
