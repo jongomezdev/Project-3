@@ -5,6 +5,9 @@ import Wrapper from "./components/wrapper";
 import Navbar from "./components/navbar";
 import Login from "./components/login";
 
+import LandingPage from './pages/LandingPage';
+// import Wrapper from "./components/Wrapper/index";
+import Navbar from './components/Navbar/app';
 
 function App() {
   return (
@@ -18,6 +21,11 @@ function App() {
       <LandingPage />
       </Wrapper>
     </div>
+      <div>
+        <Navbar />
+        <h1>hello world</h1>
+        <LandingPage />
+      </div>
     </Router>
   );
 }
