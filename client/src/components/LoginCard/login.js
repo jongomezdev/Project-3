@@ -1,5 +1,6 @@
 import { Button } from "bootstrap";
 import React from "react";
+import { Container } from "react-router-dom";
 // USING MATERIAL UI 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -9,8 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Button from '@material-ui/core/Button';
-
-import '../components/LoginCard'
+// import "./style.css";
 
 // USING MATERIAL UI 
 
@@ -20,10 +20,10 @@ const useStyles = makeStyles((styles) => ({
         width: "100%",
     },
     submit: {
-        margin: theme.spacing(3, 0, 2),
+        margin: styles.spacing(3, 0, 2),
     },
     avatar: {
-        
+        backgroundColor: styles.palette.secondary.main,
     }
 }));
 
