@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from "./pages/LandingPage";
-import Wrapper from "./components/Wrapper/wrapper";
-import Navbar from "./components/Navbar/app";
-import Login from "./components/LoginCard/login";
+import Wrapper from "./components/wrapper";
+import Navbar from "./components/navbar";
+import Login from "./components/login";
 
 
 function App() {
