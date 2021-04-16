@@ -18,9 +18,10 @@ const useStyles = makeStyles((styles) => ({
         width: "100%",
     },
     submit: {
-        margin: styles.spacing(3, 0, 2),
+        // margin: styles.spacing(3, 0, 2),
     },
     avatar: {
+        // margin: theme.spacing(1),
         backgroundColor: styles.palette.primary.main,
     },
     main: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles((styles) => ({
 function Login() {
     const classes = useStyles();
     return (
-        <Container component="main" >
+        <Container component="main" maxWidth="xs">
            <Avatar className="classes.avatar">
                 <VpnKeyOutlinedIcon/>
             </Avatar>
