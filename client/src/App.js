@@ -1,33 +1,40 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from "./pages/LandingPage";
-import Wrapper from "./components/wrapper";
-import Navbar from "./components/navbar";
-import Login from "./components/login";
-
-import LandingPage from './pages/LandingPage';
+import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
+import Login from "./components/LoginForm";
+// import Form from './components/Form';
+import PageContentLogin from './components/PageContent';
+// import { ThemeProvider } from './contexts/ThemeContext';
+import { ThemeProvider } from '@material-ui/styles'
 // import Wrapper from "./components/Wrapper/index";
-import Navbar from './components/Navbar/app';
 
 function App() {
   return (
-    <Router>
+<ThemeProvider>
+  <Router>
     <div>
-      <Wrapper>
-      {/* <Login /> */}
-      <Navbar />
-      <h1>hello world</h1>
-      <Route exact path="/" component={Login} />
-      <LandingPage />
-      </Wrapper>
+    <Wrapper>
+    <Navbar />
+    <Route exact path="/" component={Login} />
+    </Wrapper>
     </div>
-      <div>
-        <Navbar />
-        <h1>hello world</h1>
-        <LandingPage />
-      </div>
-    </Router>
+  </Router>
+</ThemeProvider>
   );
 }
+
+/* <PageContentLogin>
+// <Router>
+// <div>
+//   <Wrapper>
+//   <Navbar />
+//   <Route exact path="/" component={Login} />
+//   <LandingPage />
+//   </Wrapper>
+// </div>
+// </Router>
+// </PageContentLogin> */
 
 export default App;
