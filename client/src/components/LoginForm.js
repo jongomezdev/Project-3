@@ -19,7 +19,7 @@ const useStyles = makeStyles((styles) => ({
         margin: styles.spacing(3, 0, 2),
     },
     avatar: {
-        backgroundColor: styles.palette.primary.main,
+        backgroundColor: styles.palette.primary.light,
     },
     
 }));
@@ -63,7 +63,7 @@ function Login() {
                     fullWidth
                 >Login</Button>
                 <FormControlLabel
-                    control={ <Checkbox color="primary" value="remember" />}
+                    control={ <Checkbox color="secondary" value="remember" />}
                     label="Remember Me"
                 />
             <Grid container>

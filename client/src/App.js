@@ -25,16 +25,4 @@ function App() {
   );
 }
 
-/* <PageContentLogin>
-// <Router>
-// <div>
-//   <Wrapper>
-//   <Navbar />
-//   <Route exact path="/" component={Login} />
-//   <LandingPage />
-//   </Wrapper>
-// </div>
-// </Router>
-// </PageContentLogin> */
-
 export default App;
