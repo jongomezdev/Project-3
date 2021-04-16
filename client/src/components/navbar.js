@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './style.css';
+// import './style.css';
 
 const addressCard = <FontAwesomeIcon icon={faAddressCard} />;
 const search = <FontAwesomeIcon icon={faSearch} />;

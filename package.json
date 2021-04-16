@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@material-ui/icons": "^4.11.2",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.6.0",
@@ -33,6 +34,7 @@
     "gravatar": "^1.8.1",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
+    "material-ui": "^0.20.2",
     "mongoose": "^5.3.16",
     "node-sass": "^5.0.0",
     "request": "^2.88.2"
