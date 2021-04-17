@@ -20,6 +20,7 @@ const useStyles = makeStyles((styles) => ({
     },
     avatar: {
         backgroundColor: styles.palette.primary.dark,
+        margin: styles.spacing(1)
     },
     
 }));
@@ -30,9 +31,9 @@ function Login() {
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <div className={classes.loginname}>
-           <Avatar className="classes.avatar">
+                <Avatar className={classes.avatar}>
                 <VpnKeyOutlinedIcon/>
-            </Avatar>
+                </Avatar>
             <Typography component="h1" variant="h5">Login</Typography>
             <form className="classes.form">
             <TextField
@@ -68,10 +69,10 @@ function Login() {
                 />
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="bodyLink">Forget Password</Link>
+                <Link href="#" variant="gridLink">Forget Password</Link>
               </Grid>
               <Grid item xs>
-                <Link href="#" variant="bodyLink">Sign Up</Link>
+                <Link href="#" variant="gridLink" >Sign Up</Link>
               </Grid>
             </Grid>
 
