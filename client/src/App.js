@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Login from "./components/LoginForm";
+import Register from "./components/Register";
 //import JobSearch from "./pages/JobSearch";
 import SearchForm from "./components/SearchForm"
 // import Form from './components/Form';
@@ -20,8 +21,8 @@ function App() {
     <Wrapper>
     <Navbar />
     <Route exact path="/" component={Login} />
+    <Route exact path="/register" component={Register} />
     <Switch>
-    
     <Route exact path="/search" component={SearchForm} />
     </Switch>
     </Wrapper>
