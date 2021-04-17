@@ -14,6 +14,7 @@ import { ThemeProvider } from '@material-ui/styles';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import Alert from './components/Alert';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Wrapper>
               <Navbar />
               <Route exact path="/" component={Login} />
+              <Alert />
               <Switch>
                 <Route exact path="/search" component={SearchForm} />
               </Switch>
