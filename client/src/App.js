@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Login from "./components/LoginForm";
+import Register from "./components/Register";
+//import JobSearch from "./pages/JobSearch";
 import SearchForm from "./components/SearchForm"
 // import Form from './components/Form';
 // import { ThemeProvider } from './contexts/ThemeContext';
@@ -22,6 +24,7 @@ function App() {
     <Switch>
     <Route exact path="/" component={LandingPage} />
     <Route exact path="/login" component={Login} />
+    <Route exact path="/register" component={Register} />
     <Route exact path="/search" component={SearchForm} />
     </Switch>
     </Wrapper>
