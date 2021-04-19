@@ -11,6 +11,8 @@ import SearchForm from "./components/SearchForm"
 // import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles'
 // import Wrapper from "./components/Wrapper/index";
+//import JobSearch from "./pages/JobSearch";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -19,9 +21,10 @@ function App() {
     <div>
     <Wrapper>
     <Navbar />
-    <Route exact path="/" component={Login} />
-    <Route exact path="/register" component={Register} />
     <Switch>
+    <Route exact path="/" component={LandingPage} />
+    <Route exact path="/login" component={Login} />
+    <Route exact path="/register" component={Register} />
     <Route exact path="/search" component={SearchForm} />
     </Switch>
     </Wrapper>
