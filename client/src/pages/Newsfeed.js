@@ -8,18 +8,18 @@
 // class Newsfeed extends Component {
 //     state = {
 //         error: "",
-//         newsfeedposts: [],
+//         posts: [],
 //         results: []
 //     };
 
 //     componentDidMount() {
 //         API.getNewsfeedPosts()
-//         .then(res => this.setState({ newsfeedposts: res.data.message }))
+//         .then(res => this.setState({ posts: res.data.message }))
 //         .catch(err => console.log(err));
 //     }
 
 //     handleInputChange = e => {
-//         this.setState({ newsfeedposts: e.target.value });
+//         this.setState({ posts: e.target.value });
 //     }
 // }
 
