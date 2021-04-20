@@ -10,6 +10,7 @@ import SearchForm from "./components/SearchForm"
 // import Form from './components/Form';
 // import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles'
+import Newsfeed from "./components/Newsfeed";
 // import Wrapper from "./components/Wrapper/index";
 //import JobSearch from "./pages/JobSearch";
 import LandingPage from "./pages/LandingPage";
@@ -26,6 +27,9 @@ function App() {
     <Route exact path="/login" component={Login} />
     <Route exact path="/register" component={Register} />
     <Route exact path="/search" component={SearchForm} />
+    </Switch>
+    <Switch>
+    <Route exact path="/newsfeed" component={Newsfeed} />
     </Switch>
     </Wrapper>
     </div>
