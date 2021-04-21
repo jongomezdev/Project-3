@@ -14,12 +14,14 @@ import Newsfeed from "./components/Newsfeed";
 // import Wrapper from "./components/Wrapper/index";
 //import JobSearch from "./pages/JobSearch";
 import LandingPage from "./pages/LandingPage";
+import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
   return (
 <ThemeProvider>
   <Router>
     <div>
+    <StoreProvider>
     <Wrapper>
     <Navbar />
     <Switch>
@@ -32,6 +34,7 @@ function App() {
     <Route exact path="/newsfeed" component={Newsfeed} />
     </Switch>
     </Wrapper>
+    </StoreProvider>
     </div>
   </Router>
 </ThemeProvider>
