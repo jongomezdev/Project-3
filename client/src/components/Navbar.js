@@ -13,6 +13,7 @@ const comments = <FontAwesomeIcon icon={faComments} />;
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        
       <button
         className="navbar-toggler collapsed"
         type="button"
@@ -24,7 +25,9 @@ function Navbar() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-
+        <Link className="navbar-brand" to="/">
+          DevSync
+        </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -39,6 +42,7 @@ function Navbar() {
             >
               {' '}
               {addressCard}
+              {' '}
               Profile
             </Link>
           </li>
@@ -51,7 +55,9 @@ function Navbar() {
                   : 'nav-link'
               }
             >
+              {' '}
               {comments}
+              {' '}
               Newsfeed
             </Link>
           </li>
@@ -66,9 +72,20 @@ function Navbar() {
             >
               {' '}
               {search}
+              {' '}
               Search
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/logout"
+              className='mr-sm-2 nav-link'
+            >
+              {' '}
+              Logout
+            </Link>
+          </li>
+          
         </ul>
       </div>
     </nav>
@@ -76,3 +93,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// TODO: if user is logged in, button should say "logout", else say "login" 
