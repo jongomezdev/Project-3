@@ -11,6 +11,7 @@ import SearchForm from './components/SearchForm';
 // import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from "./components/Newsfeed";
+import { StoreProvider } from "./utils/GlobalState";
 // import Wrapper from "./components/Wrapper/index";
 //import JobSearch from "./pages/JobSearch";
 import LandingPage from "./pages/LandingPage";
