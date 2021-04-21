@@ -11,6 +11,7 @@ import SearchForm from "./components/SearchForm"
 // import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles'
 import Newsfeed from "./components/Newsfeed";
+import { StoreProvider } from "./utils/GlobalState";
 // import Wrapper from "./components/Wrapper/index";
 
 function App() {
@@ -18,17 +19,19 @@ function App() {
 <ThemeProvider>
   <Router>
     <div>
-    <Wrapper>
-    <Navbar />
-    <Route exact path="/" component={Login} />
-    <Route exact path="/register" component={Register} />
-    <Switch>
-    <Route exact path="/search" component={SearchForm} />
-    </Switch>
-    <Switch>
-    <Route exact path="/newsfeed" component={Newsfeed} />
-    </Switch>
-    </Wrapper>
+    <StoreProvider>
+      <Wrapper>
+        <Navbar />
+          <Route exact path="/" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Switch>
+          <Route exact path="/search" component={SearchForm} />
+          </Switch>
+          <Switch>
+          <Route exact path="/newsfeed" component={Newsfeed} />
+        </Switch>
+      </Wrapper>
+    </StoreProvider>
     </div>
   </Router>
 </ThemeProvider>
