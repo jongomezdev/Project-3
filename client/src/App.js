@@ -21,18 +21,20 @@ function App() {
 <ThemeProvider>
   <Router>
     <div>
-    <Wrapper>
-    <Navbar />
-    <Switch>
-    <Route exact path="/" component={LandingPage} />
-    <Route exact path="/login" component={Login} />
-    <Route exact path="/register" component={Register} />
-    <Route exact path="/search" component={SearchForm} />
-    </Switch>
-    <Switch>
-    <Route exact path="/newsfeed" component={Newsfeed} />
-    </Switch>
-    </Wrapper>
+    <StoreProvider>
+      <Wrapper>
+      <Navbar />
+        <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/search" component={SearchForm} />
+        </Switch>
+        <Switch>
+        <Route exact path="/newsfeed" component={Newsfeed} />
+        </Switch>
+      </Wrapper>
+    </StoreProvider>
     </div>
   </Router>
 </ThemeProvider>
