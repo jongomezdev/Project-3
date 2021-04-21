@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { PostItem, List } from "../List";
-import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
-import API from "../../utils/API";
+import { ListItem, List } from "../components/PostItem";
+import { useStoreContext } from "../utils/GlobalState";
+import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
+import API from "../utils/API";
 
 function PostList() {
     const [state, dispatch] = useStoreContext();
@@ -45,7 +45,6 @@ function PostList() {
                     {post.body}
                   </strong>
                 </Link>
-                <DeleteBtn onClick={() => removePost(post._id)} />
               </ListItem>
             ))}
           </List>
@@ -55,5 +54,6 @@ function PostList() {
       </div>
       );
 }
+// <DeleteBtn onClick={() => removePost(post._id)} />
 
 export default PostList;

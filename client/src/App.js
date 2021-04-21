@@ -15,7 +15,6 @@ import { StoreProvider } from "./utils/GlobalState";
 // import Wrapper from "./components/Wrapper/index";
 //import JobSearch from "./pages/JobSearch";
 import LandingPage from "./pages/LandingPage";
-import { StoreProvider } from "./utils/GlobalState";
 
 // Redux
 import { Provider } from 'react-redux';

@@ -3,6 +3,7 @@ import { useStoreContext } from "../utils/GlobalState";
 import { ADD_POST, LOADING } from "../utils/actions";
 import API from "../utils/API";
 import {makeStyles, Button, TextField} from '@material-ui/core';
+import PostList from "../components/PostList";
 
 const useStyles = makeStyles((styles) => ({
     // STYLING BELOW
@@ -34,11 +35,13 @@ function Newsfeed() {
                 post: result.data
             });
         }).catch(err => console.log(err));
+        
         bodyRef.current.value = "";
     }
 
     const classes = useStyles();
     return (
+        <div>
        <form className="classes.form" >
             <TextField 
             className="posts"
@@ -61,9 +64,11 @@ function Newsfeed() {
             variant="outlined"
             className={classes.submit}
             onSubmit={handleFormSubmit}
-            disabled={state.loading} 
+            // disabled={state.loading} 
             >Submit</Button>
       </form> 
+      <PostList />
+      </div>
     );
 }
 // onChange={handleInputChange} - had it inside the textinput
