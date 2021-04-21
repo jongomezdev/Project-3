@@ -13,25 +13,26 @@ import { ThemeProvider } from '@material-ui/styles'
 import Newsfeed from "./components/Newsfeed";
 import { StoreProvider } from "./utils/GlobalState";
 // import Wrapper from "./components/Wrapper/index";
+//import JobSearch from "./pages/JobSearch";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
 <ThemeProvider>
   <Router>
     <div>
-    <StoreProvider>
-      <Wrapper>
-        <Navbar />
-          <Route exact path="/" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Switch>
-          <Route exact path="/search" component={SearchForm} />
-          </Switch>
-          <Switch>
-          <Route exact path="/newsfeed" component={Newsfeed} />
-        </Switch>
-      </Wrapper>
-    </StoreProvider>
+    <Wrapper>
+    <Navbar />
+    <Switch>
+    <Route exact path="/" component={LandingPage} />
+    <Route exact path="/login" component={Login} />
+    <Route exact path="/register" component={Register} />
+    <Route exact path="/search" component={SearchForm} />
+    </Switch>
+    <Switch>
+    <Route exact path="/newsfeed" component={Newsfeed} />
+    </Switch>
+    </Wrapper>
     </div>
   </Router>
 </ThemeProvider>
