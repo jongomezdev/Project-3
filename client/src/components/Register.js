@@ -1,108 +1,116 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setAlert } from '../../actions/alert';
-import { register } from '../../actions/auth';
-// import {
-//   makeStyles,
-//   CssBaseline,
-//   Button,
-//   Container,
-//   Avatar,
-//   Typography,
-//   TextField,
-//   FormControlLabel,
-//   Checkbox,
-//   Grid,
-//   Link,
-// } from '@material-ui/core';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
+import {
+  makeStyles,
+  CssBaseline,
+  Button,
+  Container,
+  Avatar,
+  Typography,
+  TextField,
+  Grid,
+  Link,
+} from '@material-ui/core';
 
-// const useStyles = makeStyles((styles) => ({
-//   // styles
-// }));
+const useStyles = makeStyles((styles) => ({
+  // styles
+  register: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    marginTop: styles.spacing(10),
+  },
+  form: {
+    width: '100%',
+  },
+  submit: {
+    margin: styles.spacing(3, 0, 2),
+  },
+  avatar: {
+    backgroundColor: styles.palette.primary.dark,
+    margin: styles.spacing(1),
+  },
+}));
 
-const Register = ({ setAlert, register }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    password2: '',
-  });
-
-  const { name, email, password, password2 } = formData;
-
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (password !== password2) {
-      setAlert('Passwords do not match');
-    } else {
-      register({ name, email, password });
-    }
-  };
-
+function Register() {
+  const classes = useStyles();
   return (
-    <>
-      <form className="form" onSubmit={(e) => onSubmit(e)}>
-        <h1 className="large text-primary">Sign Up</h1>
-        <p className="lead">
-          <i className="fas fa-user" /> Create Your Account
-        </p>
-        <form className="form" onSubmit={onSubmit}>
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              value={name}
-              onChange={onChange}
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              value={email}
-              onChange={onChange}
-            />
-            <small className="form-text">
-              This site uses Gravatar so if you want a profile image, use a
-              Gravatar email
-            </small>
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={password}
-              onChange={onChange}
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              name="password2"
-              value={password2}
-              onChange={onChange}
-            />
-          </div>
-          <input type="submit" className="btn btn-primary" value="Register" />
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <div className={classes.register}>
+        <Avatar className={classes.avatar}>
+          <LockOpenIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Register
+        </Typography>
+        <form className="classes.form">
+          <Grid container spacing={4}>
+            <Grid item xs={1} sm={6}>
+              <TextField
+                id="firstname"
+                name="firstname"
+                autoComplete="firstname"
+                label="First Name"
+                fullWidth
+                required
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="lastname"
+                name="lastname"
+                autoComplete="lastname"
+                label="Last Name"
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="email"
+                name="email"
+                autoComplete="email"
+                label="Email Address"
+                margin="normal"
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="password"
+                name="password"
+                autoComplete="password"
+                label="Password"
+                margin="normal"
+                type="password"
+                fullWidth
+                required
+              />
+            </Grid>
+          </Grid>
+          <Button
+            type="submit"
+            color="primary"
+            variant="outlined"
+            className={classes.submit}
+            fullWidth
+          >
+            Register
+          </Button>
+          <Grid container justify="flex-end">
+            <Grid item>
+              <Link href="#" variant="gridLink">
+                Already have an account? Login
+              </Link>
+            </Grid>
+          </Grid>
         </form>
-        <p className="my-1">
-          Already have an account? <Link to="/login">Sign In</Link>
-        </p>
-      </form>
-    </>
+      </div>
+    </Container>
   );
-};
+}
 
-Register.propTypes = {
-  setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired,
-};
-
-export default connect(null, { setAlert, register })(Register);
+export default Register;
