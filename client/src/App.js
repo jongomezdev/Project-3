@@ -15,6 +15,7 @@ import { StoreProvider } from "./utils/GlobalState";
 // import Wrapper from "./components/Wrapper/index";
 //import JobSearch from "./pages/JobSearch";
 import LandingPage from "./pages/LandingPage";
+import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
   return (
@@ -22,18 +23,18 @@ function App() {
   <Router>
     <div>
     <StoreProvider>
-      <Wrapper>
-      <Navbar />
-        <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/search" component={SearchForm} />
-        </Switch>
-        <Switch>
-        <Route exact path="/newsfeed" component={Newsfeed} />
-        </Switch>
-      </Wrapper>
+    <Wrapper>
+    <Navbar />
+    <Switch>
+    <Route exact path="/" component={LandingPage} />
+    <Route exact path="/login" component={Login} />
+    <Route exact path="/register" component={Register} />
+    <Route exact path="/search" component={SearchForm} />
+    </Switch>
+    <Switch>
+    <Route exact path="/newsfeed" component={Newsfeed} />
+    </Switch>
+    </Wrapper>
     </StoreProvider>
     </div>
   </Router>
