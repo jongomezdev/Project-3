@@ -19,7 +19,8 @@ const useStyles = makeStyles((styles) => ({
         margin: styles.spacing(3, 0, 2),
     },
     avatar: {
-        backgroundColor: styles.palette.primary.light,
+        backgroundColor: styles.palette.primary.dark,
+        margin: styles.spacing(1)
     },
     
 }));
@@ -30,9 +31,9 @@ function Login() {
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <div className={classes.loginname}>
-           <Avatar className="classes.avatar">
+                <Avatar className={classes.avatar}>
                 <VpnKeyOutlinedIcon/>
-            </Avatar>
+                </Avatar>
             <Typography component="h1" variant="h5">Login</Typography>
             <form className="classes.form">
             <TextField
@@ -63,15 +64,15 @@ function Login() {
                     fullWidth
                 >Login</Button>
                 <FormControlLabel
-                    control={ <Checkbox color="secondary" value="remember" />}
+                    control={ <Checkbox color="primary" value="remember" />}
                     label="Remember Me"
                 />
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="bodyLink">Forget Password</Link>
+                <Link href="#" variant="gridLink">Forget Password</Link>
               </Grid>
               <Grid item xs>
-                <Link href="#" variant="bodyLink">Sign Up</Link>
+                <Link href="#" variant="gridLink" >Sign Up</Link>
               </Grid>
             </Grid>
 
