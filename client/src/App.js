@@ -7,8 +7,6 @@ import Login from './components/LoginForm';
 import Register from './components/Register';
 //import JobSearch from "./pages/JobSearch";
 import SearchForm from './components/SearchForm';
-// import Form from './components/Form';
-// import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from './components/Newsfeed';
 import { StoreProvider } from './utils/GlobalState';
