@@ -8,7 +8,6 @@ import Register from './components/Register';
 //import JobSearch from "./pages/JobSearch";
 import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
-import { StoreProvider } from '../src/utils/GlobalState';
 import Newsfeed from './components/Newsfeed';
 import { StoreProvider } from './utils/GlobalState';
 // import Wrapper from "./components/Wrapper/index";
