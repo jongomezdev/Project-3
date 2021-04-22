@@ -88,7 +88,6 @@ const Register = ({ setAlert, register }) => {
                 onChange={onChange}
                 autoComplete="email"
                 label="Email Address"
-                margin="normal"
                 fullWidth
               />
             </Grid>

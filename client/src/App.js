@@ -10,6 +10,7 @@ import SearchForm from './components/SearchForm';
 // import Form from './components/Form';
 // import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeProvider } from '@material-ui/styles';
+import { StoreProvider } from '../src/utils/GlobalState';
 import Newsfeed from './components/Newsfeed';
 // import { StoreProvider } from './utils/GlobalState';
 // import Wrapper from "./components/Wrapper/index";
@@ -26,7 +27,7 @@ function App() {
       <ThemeProvider>
         <Router>
           <div>
-            {/* <StoreProvider> */}
+            <StoreProvider>
             <Wrapper>
               <Navbar />
               <Switch>
@@ -39,7 +40,7 @@ function App() {
                 <Route exact path="/newsfeed" component={Newsfeed} />
               </Switch>
             </Wrapper>
-            {/* </StoreProvider> */}
+            </StoreProvider>
           </div>
         </Router>
       </ThemeProvider>

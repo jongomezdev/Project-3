@@ -26,9 +26,10 @@ function Newsfeed() {
 
     const handleFormSubmit = e => {
         e.preventDefault();
+        console.log(bodyRef.current.value)
         dispatch({ type: LOADING });
         API.savePost({
-            body: bodyRef.current.value
+            text: bodyRef.current.value
         }).then(result => {
             dispatch({
                 type: ADD_POST,
@@ -42,10 +43,10 @@ function Newsfeed() {
     const classes = useStyles();
     return (
         <div>
-       <form className="classes.form" >
+       <form className="classes.form" onSubmit={handleFormSubmit}> 
             <TextField 
             className="posts"
-            ref={bodyRef}
+            inputRef={bodyRef}
             id="filled-full-width"
             label="Post Here"
             style={{ margin: 8 }}
@@ -63,7 +64,6 @@ function Newsfeed() {
             color="primary"
             variant="outlined"
             className={classes.submit}
-            onSubmit={handleFormSubmit}
             // disabled={state.loading} 
             >Submit</Button>
       </form> 
