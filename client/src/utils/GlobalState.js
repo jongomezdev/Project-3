@@ -56,7 +56,7 @@ const StoreProvider = ({ value = [], ...props }) => {
         posts: [],
         currPost: {
             _id: 0,
-            body: ""
+            post: ""
         },
         favorites: [],
         loading: false

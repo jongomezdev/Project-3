@@ -1,29 +1,17 @@
-// import React, { Component } from "react";
-// import Newsfeed from "../components/Newsfeed"
-// // import { useStoreContext } from "../utils/GlobalState";
-// // import { ADD_POST } from "../utils/actions";
+// import React, { useEffect } from "react";
+// import { Link } from "react-router-dom";
 // import API from "../utils/API";
+// import { useStoreContext } from "../utils/GlobalState";
+// import { SET_CURR_POST, ADD_FAVORITE, REMOVE_FAVORITE } from "../utils/actions";
 
+// const NewsPosts = props => {
+//     const [state, dispatch] = useStoreContext();
 
-// class Newsfeed extends Component {
-//     state = {
-//         error: "",
-//         posts: [],
-//         results: []
-//     };
-
-//     componentDidMount() {
-//         API.getNewsfeedPosts()
-//         .then(res => this.setState({ posts: res.data.message }))
-//         .catch(err => console.log(err));
-//     }
-
-//     handleInputChange = e => {
-//         this.setState({ posts: e.target.value });
-//     }
+//     useEffect(() => {
+//         API.getPost(props.match.params.id)
+//           .then(res => dispatch({ type: SET_CURR_POST, post: res.data }))
+//           .catch(err => console.log(err));
+//       }, []);
 // }
 
-
-// export default Newsfeed;
-
-
+// export default NewsPosts;

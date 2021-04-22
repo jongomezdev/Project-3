@@ -3,6 +3,7 @@ import { useStoreContext } from "../utils/GlobalState";
 import { ADD_POST, LOADING } from "../utils/actions";
 import API from "../utils/API";
 import {makeStyles, Button, TextField} from '@material-ui/core';
+import PostList from "../components/PostList";
 
 const useStyles = makeStyles((styles) => ({
     // STYLING BELOW
@@ -25,24 +26,27 @@ function Newsfeed() {
 
     const handleFormSubmit = e => {
         e.preventDefault();
+        console.log(bodyRef.current.value)
         dispatch({ type: LOADING });
         API.savePost({
-            body: bodyRef.current.value
+            text: bodyRef.current.value
         }).then(result => {
             dispatch({
                 type: ADD_POST,
                 post: result.data
             });
         }).catch(err => console.log(err));
+        
         bodyRef.current.value = "";
     }
 
     const classes = useStyles();
     return (
-       <form className="classes.form" >
+        <div>
+       <form className="classes.form" onSubmit={handleFormSubmit}> 
             <TextField 
             className="posts"
-            ref={bodyRef}
+            inputRef={bodyRef}
             id="filled-full-width"
             label="Post Here"
             style={{ margin: 8 }}
@@ -60,10 +64,11 @@ function Newsfeed() {
             color="primary"
             variant="outlined"
             className={classes.submit}
-            onSubmit={handleFormSubmit}
-            disabled={state.loading} 
+            // disabled={state.loading} 
             >Submit</Button>
       </form> 
+      <PostList />
+      </div>
     );
 }
 // onChange={handleInputChange} - had it inside the textinput
