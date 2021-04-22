@@ -4,10 +4,8 @@ import { ListItem, List } from "../components/PostItem";
 import { useStoreContext } from "../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
 import API from "../utils/API";
-
 function PostList() {
     const [state, dispatch] = useStoreContext();
-
     const getPost = () => {
         dispatch({ type: LOADING  });
         API.getPost()
@@ -18,7 +16,6 @@ function PostList() {
             });
         }).catch(err => console.log(err));
     }
-
     const removePost = id => {
         API.deletePost(id)
         .then(() => {
@@ -28,11 +25,9 @@ function PostList() {
             });
         }).catch(err => console.log(err));
     }
-
     useEffect(() => {
         getPost();
       }, []);
-
       return (
         <div>
         <h1>DevSync Posts</h1>
@@ -55,5 +50,4 @@ function PostList() {
       );
 }
 // <DeleteBtn onClick={() => removePost(post._id)} />
-
 export default PostList;
