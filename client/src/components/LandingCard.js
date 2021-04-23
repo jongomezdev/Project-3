@@ -3,7 +3,8 @@ import { Card, makeStyles, CardActions, CardContent, Button, Typography } from '
 
 const useStyles = makeStyles({
     root: {
-      width: 350,
+      width: 370,
+      height: 200,
       float: "left",
       padding: "10px",
       margin: "20px",
@@ -17,6 +18,7 @@ const useStyles = makeStyles({
       display: 'inline-block',
       backgroundColor: "#90EE90"
     },
+    
     text: {
         textAlign: 'center',
       },
@@ -42,4 +44,5 @@ function LandingCard() {
     </Card> 
     )
 }
+
 export default LandingCard;

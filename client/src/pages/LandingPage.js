@@ -10,8 +10,7 @@ const useStyles = makeStyles({
       flexDirection: "row", 
       left: '50%',
       justifyContent: "center",
-      opacity: "0.75"
-      
+      backgroundSize: 'cover',
     },
   });
 
@@ -21,7 +20,7 @@ function LandingPage() {
         <div className={classes.root} style={{ 
             backgroundImage: `url(${background})`,
             backgroundRepeat: 'no-repeat',
-            height:'800px',
+            height: '91.5vh',
             width: '100%',
           }}>
         <LandingCard />
