@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import VpnKeyOutlinedIcon from '@material-ui/icons/VpnKeyOutlined';
 import {
   makeStyles,
@@ -16,6 +17,7 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/auth';
+
 // USING MATERIAL UI
 const useStyles = makeStyles((styles) => ({
   // STYLING BELOW
@@ -37,7 +39,7 @@ const useStyles = makeStyles((styles) => ({
   },
 }));
 
-function Login({ login }) {
+function Login({ login, isAuthenticated }) {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     email: '',
@@ -50,8 +52,14 @@ function Login({ login }) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('Success');
+    login(email, password);
   };
+
+  // Redirect if logged in
+
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -122,4 +130,8 @@ Login.propTypes = {
   isAuthenticated: PropTypes.bool,
 };
 
-export default connect(null, { login })(Login);
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps, { login })(Login);
