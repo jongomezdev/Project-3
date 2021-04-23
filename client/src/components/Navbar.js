@@ -1,21 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-// import './style.css';
 
 const addressCard = <FontAwesomeIcon icon={faAddressCard} />;
 const search = <FontAwesomeIcon icon={faSearch} />;
 const comments = <FontAwesomeIcon icon={faComments} />;
+const logout = <FontAwesomeIcon icon={faSignOutAlt} />;
+
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <Link className="navbar-brand" to="/">
+          DevSync
+        </Link>
       <button
-        className="navbar-toggler collapsed"
+        className="navbar-toggler collapsed active"
+        href="#"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -23,14 +27,12 @@ function Navbar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
       </button>
-        <Link className="navbar-brand" to="/">
-          DevSync
-        </Link>
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
+
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item active">
             <Link
               to="/profile"
               className={
@@ -81,6 +83,8 @@ function Navbar() {
               to="/logout"
               className='mr-sm-2 nav-link'
             >
+              {' '}
+              {logout}
               {' '}
               Logout
             </Link>
