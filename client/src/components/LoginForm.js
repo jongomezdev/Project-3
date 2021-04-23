@@ -58,7 +58,7 @@ function Login({ login, isAuthenticated }) {
   // Redirect if logged in
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/newsfeed" />;
   }
 
   return (
@@ -127,7 +127,6 @@ function Login({ login, isAuthenticated }) {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
   isAuthenticated: PropTypes.bool,
 };
 
