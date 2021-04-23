@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../actions/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 // import './style.css';
@@ -12,10 +12,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const addressCard = <FontAwesomeIcon icon={faAddressCard} />;
 const search = <FontAwesomeIcon icon={faSearch} />;
 const comments = <FontAwesomeIcon icon={faComments} />;
+const loggingout = <FontAwesomeIcon icon={faSignOutAlt} />;
 
 function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const authLinks = (
-    <ul className="navbar-nav">
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav ml-auto">
       <li className="nav-item">
         <Link
           to="/profile"
@@ -58,19 +60,26 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       </li>
       <li className="nav-item">
         <Link onClick={logout} to="/" className="mr-sm-2 nav-link">
-          {' '}
-          Logout
+        {' '}
+        {loggingout}
+        {' '}
+        Logout
         </Link>
       </li>
     </ul>
+    </div>
   );
 
   const guestLinks = <></>;
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <Link className="navbar-brand" to="/">
+        DevSync
+      </Link>
       <button
-        className="navbar-toggler collapsed"
+        className="navbar-toggler collapsed active"
+        href="#"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -80,10 +89,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <Link className="navbar-brand" to="/">
-        DevSync
-      </Link>
-      {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
+      {!loading && <>{isAuthenticated ? guestLinks : authLinks}</>}
     </nav>
   );
 }
@@ -100,3 +106,4 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, { logout })(Navbar);
 
 // TODO: if user is logged in, button should say "logout", else say "login"
+//  {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
