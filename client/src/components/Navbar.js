@@ -57,7 +57,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
         </Link>
       </li>
       <li className="nav-item">
-        <Link onClick={logout} to="/#!" className="mr-sm-2 nav-link">
+        <Link onClick={logout} to="/" className="mr-sm-2 nav-link">
           {' '}
           Logout
         </Link>

@@ -59,7 +59,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   // Redirect user
   if (isAuthenticated) {
-    return <Redirect to="/newsfeed" />;
+    return <Redirect to="/dashboard" />;
   }
 
   return (

@@ -58,7 +58,7 @@ function Login({ login, isAuthenticated }) {
   // Redirect if logged in
 
   if (isAuthenticated) {
-    return <Redirect to="/newsfeed" />;
+    return <Redirect to="/dashboard" />;
   }
 
   return (

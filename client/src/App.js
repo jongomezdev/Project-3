@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import LandingPage from "./pages/LandingPage";
 import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import Login from './components/LoginForm';
@@ -10,9 +9,9 @@ import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from './components/Newsfeed';
 import { StoreProvider } from './utils/GlobalState';
-// import Wrapper from "./components/Wrapper/index";
-//import JobSearch from "./pages/JobSearch";
 import LandingPage from './pages/LandingPage';
+import Dashboard from './components/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -41,6 +40,7 @@ function App() {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/search" component={SearchForm} />
+                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 </Switch>
                 <Switch>
                   <Route exact path="/newsfeed" component={Newsfeed} />
