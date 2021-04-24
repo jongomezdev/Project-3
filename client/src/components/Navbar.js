@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../actions/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAddressCard,
+  faSignOutAlt,
+  faCog,
+} from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 // import './style.css';
@@ -13,6 +17,7 @@ const addressCard = <FontAwesomeIcon icon={faAddressCard} />;
 const search = <FontAwesomeIcon icon={faSearch} />;
 const comments = <FontAwesomeIcon icon={faComments} />;
 const loggingout = <FontAwesomeIcon icon={faSignOutAlt} />;
+const settings = <FontAwesomeIcon icon={faCog} />;
 
 function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const authLinks = (
@@ -56,6 +61,12 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
           >
             {' '}
             {search} Search
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link onClick={logout} to="/dashboard" className="mr-sm-2 nav-link">
+            {' '}
+            {settings} Settings
           </Link>
         </li>
         <li className="nav-item">
