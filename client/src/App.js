@@ -13,6 +13,7 @@ import { StoreProvider } from './utils/GlobalState';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import CreateProfile from './components/CreateProfile';
+import EditProfile from './components/EditProfile';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -49,6 +50,11 @@ function App() {
                     exact
                     path="/create-profile"
                     component={CreateProfile}
+                  />
+                  <PrivateRoute
+                    exact
+                    path="/edit-profile"
+                    component={EditProfile}
                   />
                 </Switch>
                 <Switch>
