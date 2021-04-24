@@ -17,56 +17,54 @@ const loggingout = <FontAwesomeIcon icon={faSignOutAlt} />;
 function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const authLinks = (
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav ml-auto">
-      <li className="nav-item">
-        <Link
-          to="/profile"
-          className={
-            window.location.pathname === '/' ||
-            window.location.pathname === '/profile'
-              ? 'nav-link active'
-              : 'nav-link'
-          }
-        >
-          {' '}
-          {addressCard} Profile
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link
-          to="/newsfeed"
-          className={
-            window.location.pathname === '/newsfeed'
-              ? 'nav-link active'
-              : 'nav-link'
-          }
-        >
-          {' '}
-          {comments} Newsfeed
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link
-          to="/search"
-          className={
-            window.location.pathname === '/search'
-              ? 'nav-link active'
-              : 'nav-link'
-          }
-        >
-          {' '}
-          {search} Search
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link onClick={logout} to="/" className="mr-sm-2 nav-link">
-        {' '}
-        {loggingout}
-        {' '}
-        Logout
-        </Link>
-      </li>
-    </ul>
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link
+            to="/profile"
+            className={
+              window.location.pathname === '/' ||
+              window.location.pathname === '/profile'
+                ? 'nav-link active'
+                : 'nav-link'
+            }
+          >
+            {' '}
+            {addressCard} Profile
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/newsfeed"
+            className={
+              window.location.pathname === '/newsfeed'
+                ? 'nav-link active'
+                : 'nav-link'
+            }
+          >
+            {' '}
+            {comments} Newsfeed
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/search"
+            className={
+              window.location.pathname === '/search'
+                ? 'nav-link active'
+                : 'nav-link'
+            }
+          >
+            {' '}
+            {search} Search
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link onClick={logout} to="/" className="mr-sm-2 nav-link">
+            {' '}
+            {loggingout} Logout
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 
@@ -89,7 +87,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      {!loading && <>{isAuthenticated ? guestLinks : authLinks}</>}
+      {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
     </nav>
   );
 }
