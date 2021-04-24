@@ -12,6 +12,7 @@ import Newsfeed from './components/Newsfeed';
 import { StoreProvider } from './utils/GlobalState';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
+import CreateProfile from './components/CreateProfile';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -44,6 +45,11 @@ function App() {
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/search" component={SearchForm} />
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                  <PrivateRoute
+                    exact
+                    path="/create-profile"
+                    component={CreateProfile}
+                  />
                 </Switch>
                 <Switch>
                   <Route exact path="/newsfeed" component={Newsfeed} />
