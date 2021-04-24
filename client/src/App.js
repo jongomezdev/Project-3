@@ -4,6 +4,7 @@ import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import Login from './components/LoginForm';
 import Register from './components/Register';
+import Alert from './components/Alert';
 //import JobSearch from "./pages/JobSearch";
 import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
@@ -12,6 +13,7 @@ import { StoreProvider } from './utils/GlobalState';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
+import './styles/style.css';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -35,6 +37,7 @@ function App() {
             <StoreProvider>
               <Wrapper>
                 <Navbar />
+                <Alert />
                 <Switch>
                   <Route exact path="/" component={LandingPage} />
                   <Route exact path="/login" component={Login} />
