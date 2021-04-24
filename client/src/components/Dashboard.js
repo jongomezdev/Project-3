@@ -19,7 +19,7 @@ const Dashboard = ({
     <>
       <h1>Dashboard</h1>
       <p>Welcome {user && user.name}</p>
-      {profile !== null ? <></> : <></>}
+      {profile !== null ? <>has</> : <>has not</>}
     </>
   );
 };
