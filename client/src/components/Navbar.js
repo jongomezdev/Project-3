@@ -73,7 +73,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const guestLinks = <></>;
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
+    <nav className="navbar navbar-expand-md navbar-light bg-light ">
       <Link className="navbar-brand" to="/">
         DevSync
       </Link>

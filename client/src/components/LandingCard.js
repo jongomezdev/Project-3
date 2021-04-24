@@ -18,7 +18,6 @@ const useStyles = makeStyles({
       display: 'inline-block',
       backgroundColor: "#90EE90"
     },
-    
     text: {
         textAlign: 'center',
       },

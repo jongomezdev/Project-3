@@ -4,6 +4,8 @@ import { ListItem, List } from "../components/PostItem";
 import { useStoreContext } from "../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../utils/actions";
 import API from "../utils/API";
+
+
 function PostList() {
     const [state, dispatch] = useStoreContext();
     const getPost = () => {
@@ -30,7 +32,7 @@ function PostList() {
       }, []);
       return (
         <div>
-        <h1>DevSync Posts</h1>
+        <h3>DevSync Posts</h3>
         {state.posts.length ? (
           <List>
             {state.posts.map(post => (
@@ -44,7 +46,7 @@ function PostList() {
             ))}
           </List>
         ) : (
-          <h3>Add Your Post</h3>
+          <h4>Add Post</h4>
         )}
       </div>
       );

@@ -20,7 +20,7 @@ function LandingPage() {
         <div className={classes.root} style={{ 
             backgroundImage: `url(${background})`,
             backgroundRepeat: 'no-repeat',
-            height: '91.5vh',
+            height: '93.5vh',
             width: '100%',
           }}>
         <LandingCard />

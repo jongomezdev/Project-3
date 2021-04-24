@@ -73,8 +73,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           Register
         </Typography>
         <form className="classes.form" onSubmit={onSubmit}>
-          <Grid container spacing={4}>
-            <Grid item xs={1} sm={6}>
+          <Grid container spacing={7}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 id="name"
                 name="name"
@@ -86,7 +86,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 autoFocus
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item ={12} sm={6}>
               <TextField
                 id="email"
                 name="email"

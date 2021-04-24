@@ -12,6 +12,7 @@ import { StoreProvider } from './utils/GlobalState';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
+import Footer from "./components/Footer";
 
 // Redux
 import { Provider } from 'react-redux';
@@ -45,6 +46,7 @@ function App() {
                 <Switch>
                   <Route exact path="/newsfeed" component={Newsfeed} />
                 </Switch>
+                <Footer />
               </Wrapper>
             </StoreProvider>
           </div>
