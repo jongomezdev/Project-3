@@ -4,7 +4,7 @@ import SearchResults from "../components/SearchResults"
 
 function JobSearch() {
     return (
-        <div>
+        <div className="bg-light">
         <SearchForm />
         <SearchResults />
         </div>
