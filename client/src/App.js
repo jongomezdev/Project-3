@@ -17,6 +17,7 @@ import EditProfile from './components/EditProfile';
 import AddExperience from './components/AddExperience';
 import AddEducation from './components/AddEducation';
 import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -49,6 +50,7 @@ function App() {
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/search" component={SearchForm} />
                   <Route exact path="/profiles" component={Profiles} />
+                  <Route exact path="/profile/:id" component={Profile} />
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
                   <PrivateRoute
                     exact
