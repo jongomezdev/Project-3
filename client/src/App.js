@@ -14,6 +14,8 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import CreateProfile from './components/CreateProfile';
 import EditProfile from './components/EditProfile';
+import AddExperience from './components/AddExperience';
+import AddEducation from './components/AddEducation';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -55,6 +57,16 @@ function App() {
                     exact
                     path="/edit-profile"
                     component={EditProfile}
+                  />
+                  <PrivateRoute
+                    exact
+                    path="/add-experience"
+                    component={AddExperience}
+                  />
+                  <PrivateRoute
+                    exact
+                    path="/add-education"
+                    component={AddEducation}
                   />
                 </Switch>
                 <Switch>
