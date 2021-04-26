@@ -25,7 +25,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link
-            to="/profile"
+            to="/profiles"
             className={
               window.location.pathname === '/' ||
               window.location.pathname === '/profile'
@@ -34,7 +34,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
             }
           >
             {' '}
-            {addressCard} Profile
+            {addressCard} Developers
           </Link>
         </li>
         <li className="nav-item">
