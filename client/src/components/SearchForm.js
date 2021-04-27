@@ -1,24 +1,8 @@
 import React from "react";
-// import ReactDOM from "react-dom";
 import { Form, Col } from "react-bootstrap";
 
 
 function SearchForm({ params, onParamChange }) {
-  // create a state named searchTerm that gets updated every onChange
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const handleChange = event => {
-  //   setSearchTerm(event.target.value);
-  // };
-  // // create a state named searchResults
-  // const [searchResults, setSearchResults] = useState([]);
-  // filters the searchable data and sets the value to "results"
-//   useEffect(() => {
-//     // TODO: update "people" to the api results 
-//     const results = people.filter(person =>
-//       person.toLowerCase().includes(searchTerm)
-//     );
-//     setSearchResults(results);
-//   }, [searchTerm]);
 
     return (
       <Form className="mb-4">
@@ -38,18 +22,5 @@ function SearchForm({ params, onParamChange }) {
       </Form>
     )
 }
-
-// import React, {useState, useEffect}  from "react";
-
-
-// {/* placeholder for search results
-// TODO: move search results to the SearchResults component */}
-// {/* <ul> */}
-// {/* {searchResults.map(job => (
-// <li>{job}</li>
-// ))} */}
-// {/* {searchTerm} */}
-// {/* </ul> */}
-// onChange={handleChange}
 
 export default SearchForm;
