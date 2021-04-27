@@ -28,6 +28,7 @@ const FooterPage = () => {
               <li>
                 <a href="https://github.com/gtscott90" class="text-dark">
                   Greg Scott{' '}
+                  
                 </a>
                 <GithubOutlined />
               </li>
