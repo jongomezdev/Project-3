@@ -5,8 +5,6 @@ import Navbar from './components/Navbar';
 import Login from './components/LoginForm';
 import Register from './components/Register';
 import Alert from './components/Alert';
-//import JobSearch from "./pages/JobSearch";
-import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from './components/Newsfeed';
 
