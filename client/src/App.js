@@ -44,25 +44,6 @@ function App() {
       <ThemeProvider>
         <Router>
           <div>
-<<<<<<< HEAD
-            <StoreProvider>
-              <Wrapper>
-                <Navbar />
-                <Alert />
-                <Switch>
-                  <Route exact path="/" component={LandingPage} />
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/register" component={Register} />
-                  <Route exact path="/search" component={JobSearch} />
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                  <PrivateRoute exact path="/" component={Footer} />
-                </Switch>
-                <Switch>
-                  <Route exact path="/newsfeed" component={Newsfeed} />
-                </Switch>
-              </Wrapper>
-            </StoreProvider>
-=======
             <Wrapper>
               <Navbar />
               <Alert />
@@ -100,7 +81,6 @@ function App() {
                 <Route exact path="/newsfeed" component={Newsfeed} />
               </Switch>
             </Wrapper>
->>>>>>> f70a5b4b4414bcc9aa020c6a108d053771a762ab
           </div>
           <Footer />
         </Router>
