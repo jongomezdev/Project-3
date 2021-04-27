@@ -56,6 +56,7 @@ import LandingCard from '../components/LandingCard';
 import { makeStyles } from '@material-ui/core';
 import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
+
 const useStyles = makeStyles({
   root: {
     alignItems: 'center',

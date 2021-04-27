@@ -7,8 +7,6 @@ import Footer from './components/Footer';
 import Register from './components/Register';
 import Alert from './components/Alert';
 import { ThemeProvider } from '@material-ui/styles';
-import Newsfeed from './components/Newsfeed';
-
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import CreateProfile from './components/CreateProfile';
@@ -18,6 +16,7 @@ import AddEducation from './components/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -73,9 +72,7 @@ function App() {
                   component={AddEducation}
                 />
                 <PrivateRoute exact path="/posts" component={Posts} />
-              </Switch>
-              <Switch>
-                <Route exact path="/newsfeed" component={Newsfeed} />
+                <PrivateRoute exact path="/posts/:id" component={Post} />
               </Switch>
             </Wrapper>
           </div>
