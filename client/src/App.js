@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import Login from './components/LoginForm';
+import Footer from './components/Footer';
 import Register from './components/Register';
 import Alert from './components/Alert';
 import { ThemeProvider } from '@material-ui/styles';
