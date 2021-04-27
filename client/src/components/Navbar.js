@@ -39,9 +39,9 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
         </li>
         <li className="nav-item">
           <Link
-            to="/newsfeed"
+            to="/posts"
             className={
-              window.location.pathname === '/newsfeed'
+              window.location.pathname === '/posts'
                 ? 'nav-link active'
                 : 'nav-link'
             }
