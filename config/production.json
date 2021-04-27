@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://admin-jonathan:Ljfowe783021@devsync.er3mt.mongodb.net/devsync?retryWrites=true&w=majority",
+  "jwtSecret": "oursecrettoken",
+  "githubClientId": "c1952d6cec5343919121",
+  "githubSecret": "0fb9eb56a2730802bc74dfa2654d4958d04b9320"
+}
