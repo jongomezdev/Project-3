@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import SearchForm from "../components/SearchForm"
+import SearchResults from "../components/SearchResults"
 
 function JobSearch() {
     return (
-        <SearchForm />
+        <div className="bg-light">
+        <SearchResults />
+        </div>
+
     )
 }
 

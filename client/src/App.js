@@ -22,6 +22,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import JobSearch from './pages/Jobsearch';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -44,7 +45,7 @@ function App() {
                   <Route exact path="/" component={LandingPage} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/register" component={Register} />
-                  <Route exact path="/search" component={SearchForm} />
+                  <Route exact path="/search" component={JobSearch} />
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
                   <PrivateRoute exact path="/" component={Footer} />
                 </Switch>
