@@ -8,7 +8,8 @@ const ACTIONS = {
     UPDATE_HAS_NEXT_PAGE: "update-has-next-page"
 }
 // need a proxy to get around CORS error in development mode
-const BASE_URL ="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1";
+const BASE_URL = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1";
+// const BASE_URL = "/positions.json"
 
 function reducer(state, action) {
     switch (action.type) {

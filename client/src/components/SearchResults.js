@@ -17,7 +17,6 @@ export default function SearchResults() {
         setParams(prevParams => {
             return { ...prevParams, [param]: value}
         })
-
     }
 return(
 <Container className="my-4">
