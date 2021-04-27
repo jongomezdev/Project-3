@@ -6,8 +6,6 @@ import Login from './components/LoginForm';
 import Register from './components/Register';
 import Alert from './components/Alert';
 import { ThemeProvider } from '@material-ui/styles';
-import Newsfeed from './components/Newsfeed';
-
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import CreateProfile from './components/CreateProfile';
@@ -74,9 +72,6 @@ function App() {
                 />
                 <PrivateRoute exact path="/posts" component={Posts} />
                 <PrivateRoute exact path="/posts/:id" component={Post} />
-              </Switch>
-              <Switch>
-                <Route exact path="/newsfeed" component={Newsfeed} />
               </Switch>
             </Wrapper>
           </div>
