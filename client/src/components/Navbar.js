@@ -145,7 +145,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
             }
           >
             {' '}
-            {addressCard} Profile
+            {addressCard} Dashboard
           </Link>
         </li>
         <li className="nav-item">
