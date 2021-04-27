@@ -9,7 +9,7 @@ import Alert from './components/Alert';
 import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from './components/Newsfeed';
-import { StoreProvider } from './utils/GlobalState';
+
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
 import CreateProfile from './components/CreateProfile';
@@ -40,44 +40,42 @@ function App() {
       <ThemeProvider>
         <Router>
           <div>
-            <StoreProvider>
-              <Wrapper>
-                <Navbar />
-                <Alert />
-                <Switch>
-                  <Route exact path="/" component={LandingPage} />
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/register" component={Register} />
-                  <Route exact path="/search" component={SearchForm} />
-                  <Route exact path="/profiles" component={Profiles} />
-                  <Route exact path="/profile/:id" component={Profile} />
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                  <PrivateRoute
-                    exact
-                    path="/create-profile"
-                    component={CreateProfile}
-                  />
-                  <PrivateRoute
-                    exact
-                    path="/edit-profile"
-                    component={EditProfile}
-                  />
-                  <PrivateRoute
-                    exact
-                    path="/add-experience"
-                    component={AddExperience}
-                  />
-                  <PrivateRoute
-                    exact
-                    path="/add-education"
-                    component={AddEducation}
-                  />
-                </Switch>
-                <Switch>
-                  <Route exact path="/newsfeed" component={Newsfeed} />
-                </Switch>
-              </Wrapper>
-            </StoreProvider>
+            <Wrapper>
+              <Navbar />
+              <Alert />
+              <Switch>
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/search" component={SearchForm} />
+                <Route exact path="/profiles" component={Profiles} />
+                <Route exact path="/profile/:id" component={Profile} />
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                <PrivateRoute
+                  exact
+                  path="/create-profile"
+                  component={CreateProfile}
+                />
+                <PrivateRoute
+                  exact
+                  path="/edit-profile"
+                  component={EditProfile}
+                />
+                <PrivateRoute
+                  exact
+                  path="/add-experience"
+                  component={AddExperience}
+                />
+                <PrivateRoute
+                  exact
+                  path="/add-education"
+                  component={AddEducation}
+                />
+              </Switch>
+              <Switch>
+                <Route exact path="/newsfeed" component={Newsfeed} />
+              </Switch>
+            </Wrapper>
           </div>
         </Router>
       </ThemeProvider>
