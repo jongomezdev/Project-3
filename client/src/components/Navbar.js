@@ -118,6 +118,7 @@
 // //  {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { RocketOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../actions/auth';
@@ -125,6 +126,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 // import './style.css';
 const addressCard = <FontAwesomeIcon icon={faAddressCard} />;
 const search = <FontAwesomeIcon icon={faSearch} />;
@@ -188,6 +190,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
     <nav className="navbar navbar-expand-md navbar-light bg-light">
       <Link className="navbar-brand" to="/">
         DevSync
+        <RocketOutlined /> 
       </Link>
       <button
         className="navbar-toggler collapsed active"
@@ -201,7 +204,8 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
+      {/* {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>} */}
+      {!loading && <>{isAuthenticated ? guestLinks : authLinks}</>}
     </nav>
   );
 }
