@@ -24,12 +24,21 @@ const settings = <FontAwesomeIcon icon={faCog} />;
 
 function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const authLinks = (
+<<<<<<< HEAD
     <div className="collapse navbar-collapse " id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto" >
         <li className="nav-item " >
           <Link 
             to="/profile"
             className= { 
+=======
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link
+            to="/profiles"
+            className={
+>>>>>>> f70a5b4b4414bcc9aa020c6a108d053771a762ab
               window.location.pathname === '/' ||
               window.location.pathname === '/profile'
                 ? 'nav-link active'
@@ -37,14 +46,14 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
             }
           >
             {' '}
-            {addressCard} Profile
+            {addressCard} Developers
           </Link>
         </li>
         <li className="nav-item">
           <Link
-            to="/newsfeed"
+            to="/posts"
             className={
-              window.location.pathname === '/newsfeed'
+              window.location.pathname === '/posts'
                 ? 'nav-link active'
                 : 'nav-link'
             }
@@ -67,9 +76,9 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
           </Link>
         </li>
         <li className="nav-item">
-          <Link onClick={logout} to="/dashboard" className="mr-sm-2 nav-link">
+          <Link to="/dashboard" className="mr-sm-2 nav-link">
             {' '}
-            {settings} Settings
+            {settings} Dashboard
           </Link>
         </li>
         <li className="nav-item">

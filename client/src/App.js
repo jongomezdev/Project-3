@@ -10,9 +10,16 @@ import Footer from './components/Footer';
 import SearchForm from './components/SearchForm';
 import { ThemeProvider } from '@material-ui/styles';
 import Newsfeed from './components/Newsfeed';
-import { StoreProvider } from './utils/GlobalState';
+
 import LandingPage from './pages/LandingPage';
 import Dashboard from './components/Dashboard';
+import CreateProfile from './components/CreateProfile';
+import EditProfile from './components/EditProfile';
+import AddExperience from './components/AddExperience';
+import AddEducation from './components/AddEducation';
+import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
+import Posts from './components/posts/Posts';
 import PrivateRoute from './components/PrivateRoute';
 import './styles/style.css';
 
@@ -37,6 +44,7 @@ function App() {
       <ThemeProvider>
         <Router>
           <div>
+<<<<<<< HEAD
             <StoreProvider>
               <Wrapper>
                 <Navbar />
@@ -54,6 +62,45 @@ function App() {
                 </Switch>
               </Wrapper>
             </StoreProvider>
+=======
+            <Wrapper>
+              <Navbar />
+              <Alert />
+              <Switch>
+                <Route exact path="/" component={LandingPage} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/search" component={JobSearch} />
+                <Route exact path="/profiles" component={Profiles} />
+                <Route exact path="/profile/:id" component={Profile} />
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                <PrivateRoute
+                  exact
+                  path="/create-profile"
+                  component={CreateProfile}
+                />
+                <PrivateRoute
+                  exact
+                  path="/edit-profile"
+                  component={EditProfile}
+                />
+                <PrivateRoute
+                  exact
+                  path="/add-experience"
+                  component={AddExperience}
+                />
+                <PrivateRoute
+                  exact
+                  path="/add-education"
+                  component={AddEducation}
+                />
+                <PrivateRoute exact path="/posts" component={Posts} />
+              </Switch>
+              <Switch>
+                <Route exact path="/newsfeed" component={Newsfeed} />
+              </Switch>
+            </Wrapper>
+>>>>>>> f70a5b4b4414bcc9aa020c6a108d053771a762ab
           </div>
           <Footer />
         </Router>
