@@ -1,0 +1,84 @@
+.gradients {
+    background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+}
+
+.max {
+    height: 100vh !important;
+}
+
+.align-middle{
+    position: relative;
+    top: 50%;
+    transform: translateY(-70%);
+
+}
+
+.column {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+  
+a {
+    color: #fff;
+}
+
+.card 
+.txt { 
+    margin-left: 1rem;
+}
+
+h1, 
+p {
+    color:#000;
+    opacity: 1;
+}
+
+/*  */
+
+.card {
+    min-height: 280px;
+    margin: 0;
+    padding: 1.7rem 1.2rem;
+    border: none;
+    border-radius: 0;
+    color:#000000;
+    letter-spacing: .05rem;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: .4em;
+    cursor: pointer;
+    transition-delay: 0s;
+    transition-duration: 1s;
+}
+
+.card:hover {
+    /* transition-delay: 3s; */
+    /* transition-duration: 3s; */
+    transform: scale(1.1);
+    /* transition: all 100ms; */
+
+}
+
+.txt {
+    margin-left: -3rem;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.register {
+    color: #f8f8ff;
+}
+
+a {
+    z-index: 2;
+    color: #000;
+    margin-left: 1rem;
+    position: relative;
+    box-shadow: 0 8px 6px -10px black;
+    text-decoration: none !important; 
+}
+
+    

@@ -32,6 +32,10 @@
     "material-ui": "^0.20.2",
     "mongoose": "^5.3.16",
     "node-sass": "^5.0.0",
-    "request": "^2.88.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "redux": "^4.1.0",
+    "request": "^2.88.2",
+    "video-react": "^0.14.1"
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
+// import { Icon } from 'antd';
 import { Link } from 'react-router-dom';
+import { RocketOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../actions/auth';
@@ -19,14 +21,15 @@ const comments = <FontAwesomeIcon icon={faComments} />;
 const loggingout = <FontAwesomeIcon icon={faSignOutAlt} />;
 const settings = <FontAwesomeIcon icon={faCog} />;
 
+
 function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const authLinks = (
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <Link
+    <div className="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto" >
+        <li className="nav-item " >
+          <Link 
             to="/profile"
-            className={
+            className= { 
               window.location.pathname === '/' ||
               window.location.pathname === '/profile'
                 ? 'nav-link active'
@@ -81,10 +84,17 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
 
   const guestLinks = <></>;
 
+  // navbar-light bg-light
+  //style={{
+  //   backgroundColor: "#080808",
+  // }}
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light ">
+    <nav className="navbar navbar-light bg-light navbar-expand-md "style={{
+        backgroundColor: "#080808",
+      }} >
       <Link className="navbar-brand" to="/">
         DevSync
+        <RocketOutlined /> 
       </Link>
       <button
         className="navbar-toggler collapsed active"
@@ -98,7 +108,8 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
+      {/* {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>} */}
+      {!loading && <>{isAuthenticated ? guestLinks : authLinks}</>}
     </nav>
   );
 }
