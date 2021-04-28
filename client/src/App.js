@@ -41,10 +41,10 @@ function App() {
         <Router>
           <Wrapper>
             <Navbar />
-            <div className="container">
-              <Alert />
-              <Switch>
-                <Route exact path="/" component={LandingPage} />
+            <Alert />
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <div className="container">
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/search" component={JobSearch} />
@@ -73,8 +73,8 @@ function App() {
                 />
                 <PrivateRoute exact path="/posts" component={Posts} />
                 <PrivateRoute exact path="/posts/:id" component={Post} />
-              </Switch>
-            </div>
+              </div>
+            </Switch>
           </Wrapper>
         </Router>
       </ThemeProvider>
