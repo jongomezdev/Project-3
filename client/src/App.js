@@ -39,9 +39,9 @@ function App() {
     <Provider store={store}>
       <ThemeProvider>
         <Router>
-          <div>
-            <Wrapper>
-              <Navbar />
+          <Wrapper>
+            <Navbar />
+            <div className="container">
               <Alert />
               <Switch>
                 <Route exact path="/" component={LandingPage} />
@@ -74,8 +74,8 @@ function App() {
                 <PrivateRoute exact path="/posts" component={Posts} />
                 <PrivateRoute exact path="/posts/:id" component={Post} />
               </Switch>
-            </Wrapper>
-          </div>
+            </div>
+          </Wrapper>
         </Router>
       </ThemeProvider>
     </Provider>
